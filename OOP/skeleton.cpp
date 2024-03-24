@@ -49,7 +49,7 @@ public:
     // Destructor
     ~Student()
     {
-        cout << "Destructor making something";
+        cout << "Destructor of " << name << endl;
     }
 };
 
