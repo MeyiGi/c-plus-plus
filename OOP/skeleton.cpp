@@ -37,11 +37,11 @@ public:
     {
         return name;
     }
-    int setAge()
+    int getAge()
     {
         return age;
     }
-    short setScholarship()
+    short getScholarship()
     {
         return scholarship;
     }
@@ -49,9 +49,19 @@ public:
     // Destructor
     ~Student()
     {
-        cout << "Destructor of " << name << endl;
+        cout << "Destructor making something";
     }
 };
+
+ostream &operator<<(ostream &COUT, Student &student)
+{
+    cout << "Name: " << student.getName() << endl;
+    cout << "Age: " << student.getAge() << endl;
+    cout << "Scholarship: " << student.getScholarship() << endl;
+
+    cout << endl;
+    return COUT;
+}
 
 int main()
 {
