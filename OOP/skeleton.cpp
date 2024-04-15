@@ -3,50 +3,38 @@
 #include <list>
 using namespace std;
 
-class Student
+class Person
 {
-private:
+public:
     string name;
     int age;
+
+    Person(string name = "No name", int age = 0) : name(name), age(age) {}
+};
+
+class Student : public Person
+{
+private:
     short scholarship;
+    
 
 public:
     // Constrictor
     Student(string name = "No name", int age = 0, int scholarship = 0)
-    {
-        this->name = name;
-        this->age = age;
-        this->scholarship = scholarship;
-    }
-    // == operator
+        : Person(name, age), scholarship(scholarship) {}
+
     bool operator==(const Student &student) const
     {
         return (name == student.name && age == student.age && scholarship == student.scholarship);
     }
 
     // Setters
-    void setName(string name)
-    {
-        this->name = name;
-    }
-    void setAge(int age)
-    {
-        this->age = age;
-    }
     void setScholarship(short scholarship)
     {
         this->scholarship = scholarship;
     }
 
     // Getters
-    string getName()
-    {
-        return name;
-    }
-    int getAge()
-    {
-        return age;
-    }
     short getScholarship()
     {
         return scholarship;
@@ -77,8 +65,8 @@ public:
 // cout operators for classes
 ostream &operator<<(ostream &COUT, Student &student)
 {
-    cout << "Name: " << student.getName() << endl;
-    cout << "Age: " << student.getAge() << endl;
+    cout << "Name: " << student.name << endl;
+    cout << "Age: " << student.age << endl;
     cout << "Scholarship: " << student.getScholarship() << endl;
 
     cout << endl;
@@ -95,5 +83,7 @@ ostream &operator<<(ostream &COUT, MyCollection &collection)
 
 int main()
 {
+    Student x{"Daniel", 19, 4800};
+    cout << x;
     return 0;
 }
