@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1714480000 source:c:\information_technology\c++\graphics\game\game\untitled1.c
+	<graphics.h>
+	<windows.h>
+	<mmsystem.h>
+	<time.h>
+	<stdio.h>
+
+1266076214 c:\program files (x86)\codeblocks-ep\sdk\winbgim\include\graphics.h
+	<windows.h>
+	<limits.h>
+	<sstream>
+
+1714533197 source:c:\information_technology\c++\graphics\game\game2\untitled1.c
+	<graphics.h>
+	<stdlib.h>
+	<stdio.h>
+	<conio.h>
+	<time.h>
+
